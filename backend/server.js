@@ -5,7 +5,13 @@ const {PORT}=require('./config/index');
 const errorHandler=require('./middleware/errorHandler');
 const router=require('./routes/userRoutes');
 const cookieParser=require('cookie-parser');
+const cors = require('cors');
 
+app.use(cors({
+    origin: 'http://localhost:4200',
+    optionsSuccessStatus: 200
+  }));
+  
 app.use(cookieParser());
 app.use(express.json()); //allowes app to communicate data in json
 app.use(router);

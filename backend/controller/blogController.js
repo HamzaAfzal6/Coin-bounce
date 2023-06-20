@@ -3,7 +3,7 @@ const fs=require('fs');
 const Blog=require('../models/blog');
 const Comment=require('../models/comment');
 const mongodbIdPattern=/^[0-9a-fA-F]{24}$/;
-const {BACKEND_SERVER_PATH}= require('../config/index');
+const {BACKEND_SERVER_PATH,API_KEY}= require('../config/index');
 const BlogDTO=require('../dto/blogdto');
 const blogidDTO=require('../dto/blogbyidDTO');
 
